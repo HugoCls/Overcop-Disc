@@ -9,8 +9,8 @@ import httpx
 import json
 
 log_format = "%(asctime)s [%(levelname)s] %(name)s:%(filename)s - %(message)s"
-log.basicConfig(format=log_format)
 
+log.basicConfig(format=log_format)
 log.getLogger().setLevel(log.INFO)
 
 #load_dotenv()
@@ -18,7 +18,6 @@ log.getLogger().setLevel(log.INFO)
 TOKEN = os.getenv("discord_token")
 SERVER_ID = os.getenv("discord_server_id")
 
-port = int(os.environ.get("PORT", 5000))
 
 def retrieve_images(url: str):
     url = url.strip('https://')
@@ -72,4 +71,4 @@ async def images(interaction: discord.Interaction, url: str):
     else:
         await interaction.response.send_message("Bad URL")
 
-bot.run(TOKEN, port=port)
+bot.run(TOKEN)
