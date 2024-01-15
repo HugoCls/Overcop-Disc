@@ -1,3 +1,4 @@
+dotenv
 discord
 bs4
 httpx
