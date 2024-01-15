@@ -1,7 +1,7 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os
 import logging as log
 from bs4 import BeautifulSoup
@@ -13,9 +13,9 @@ log.basicConfig(format=log_format)
 
 log.getLogger().setLevel(log.INFO)
 
-load_dotenv()
+#load_dotenv()
 
-TOKEN = os.getenv("discord_token2")
+TOKEN = os.getenv("discord_token")
 SERVER_ID = os.getenv("discord_server_id")
 
 
